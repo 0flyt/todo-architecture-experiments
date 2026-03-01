@@ -7,7 +7,14 @@ export function AddTodoForm() {
 
   return (
     <>
-      <button onClick={() => addNewTodo(newTodo)}>Lägg till</button>
+      <button
+        onClick={() => {
+          addNewTodo(newTodo);
+          setNewTodo('');
+        }}
+      >
+        Lägg till
+      </button>
       <input
         type="text"
         value={newTodo}

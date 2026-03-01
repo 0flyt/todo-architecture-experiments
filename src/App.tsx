@@ -1,4 +1,5 @@
 import './App.css';
+import { PropsEventsTodo } from './PropsEventsTodo/PropsEventsTodo';
 import { SimpleTodo } from './simpleTodo/SimpleTodo';
 import { TodoPage } from './todo/components/TodoPage';
 import { TodoProvider } from './todo/context/TodoProvider';
@@ -20,11 +21,14 @@ function App() {
 
   return (
     <>
-      <p>Avancerad Todo</p>
+      <p>Props and Event Todo</p>
+      <PropsEventsTodo />
+      <p style={{ marginTop: '100px' }}>Context and Provider Todo</p>
       <TodoProvider>
         <TodoPage />
       </TodoProvider>
-      <p style={{ marginTop: '100px' }}>Simpel Todo</p>
+
+      <p style={{ marginTop: '100px' }}>One file Todo</p>
       <SimpleTodo />
     </>
   );
